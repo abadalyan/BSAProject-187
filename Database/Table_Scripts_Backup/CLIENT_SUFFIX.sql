@@ -1,4 +1,4 @@
-USE [LawFirm]
+USE [LawFirmDRM]
 GO
 
 /****** Object:  Table [dbo].[CLIENT_SUFFIX]    Script Date: 9/21/2012 8:15:52 PM ******/

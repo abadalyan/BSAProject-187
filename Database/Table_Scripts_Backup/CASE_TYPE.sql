@@ -1,4 +1,4 @@
-USE [LawFirm]
+USE [LawFirmDRM]
 GO
 
 /****** Object:  Table [dbo].[CASE_TYPE]    Script Date: 9/21/2012 8:18:47 PM ******/
@@ -12,7 +12,7 @@ CREATE TABLE [dbo].[CASE_TYPE](
 	[case_category_ID] [int] IDENTITY(1,1) NOT NULL,
 	[case_catagory] [nvarchar](255) NOT NULL,
 	[title] [nvarchar](255) NULL,
-	[amount] [int] NOT NULL,
+	[amount] [money] 
  CONSTRAINT [PK_CASE_CAT_ID] PRIMARY KEY CLUSTERED 
 (
 	[case_category_ID] ASC

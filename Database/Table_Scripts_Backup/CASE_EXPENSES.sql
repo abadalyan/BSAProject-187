@@ -1,4 +1,4 @@
-USE [LawFirm]
+USE [LawFirmDRM]
 GO
 
 /****** Object:  Table [dbo].[CASE_EXPENSE]    Script Date: 9/21/2012 8:41:27 PM ******/
@@ -11,7 +11,7 @@ GO
 CREATE TABLE [dbo].[CASE_EXPENSE](
 	[case_ID] [int] IDENTITY(1,1) NOT NULL,
 	[expense_type_ID] [int] NOT NULL,
-	[expense_rate] [int] NULL,
+	[expense_cost] [money] NULL,
  CONSTRAINT [PK_CASE_EXP_ID] PRIMARY KEY CLUSTERED 
 (
 	[case_ID] ASC,

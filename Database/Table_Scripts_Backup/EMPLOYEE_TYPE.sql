@@ -1,4 +1,4 @@
-USE [LawFirm]
+USE [LawFirmDRM
 GO
 
 /****** Object:  Table [dbo].[EMPLOYEE_TYPE]    Script Date: 9/21/2012 8:17:16 PM ******/

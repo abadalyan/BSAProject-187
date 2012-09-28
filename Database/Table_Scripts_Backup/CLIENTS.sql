@@ -1,4 +1,4 @@
-USE [LawFirm]
+USE [LawFirmDRM]
 GO
 
 /****** Object:  Table [dbo].[CLIENTS]    Script Date: 9/21/2012 8:23:26 PM ******/
@@ -11,8 +11,20 @@ GO
 CREATE TABLE [dbo].[CLIENTS](
 	[client_ID] [int] IDENTITY(1,1) NOT NULL,
 	[client_status_ID] [int] NOT NULL,
+	[app_ret_date][datetime] NOT NULL,
 	[client_suffix_ID] [int] NOT NULL,
-	[client_name] [nvarchar](255) NOT NULL,
+	[first_name] [nvarchar](255) NOT NULL,
+	[last_name][nvarchar](255) NOT NULL,
+	[DOB][datetime],
+	[STREET_ADDRESS][nvarchar](255),
+	[CITY][varchar](100) ,
+	[STATE][char](2),
+	[ZIP][int] ,
+	[JID_CDC][nvarchar](100),
+	[SSN][int],
+	[DRIVER_LICENSE][nvarchar](25),
+	[EMAIL][nvarchar](50),
+	[PHONE][nvarchar](20)
  CONSTRAINT [PK_CLIENT_ID] PRIMARY KEY CLUSTERED 
 (
 	[client_ID] ASC

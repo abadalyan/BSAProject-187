@@ -1,4 +1,4 @@
-USE [LawFirm]
+USE [LawFirmDRM]
 GO
 
 /****** Object:  Table [dbo].[SPECIALISTS]    Script Date: 9/21/2012 8:33:59 PM ******/
@@ -11,6 +11,15 @@ GO
 CREATE TABLE [dbo].[SPECIALISTS](
 	[specialist_ID] [int] IDENTITY(1,1) NOT NULL,
 	[specialist_type_ID] [int] NULL,
+	[first_name] [nvarchar](255) NOT NULL,
+	[last_name][nvarchar](255) NOT NULL,
+	[DOB][datetime],
+	[STREET_ADDRESS][nvarchar](255),
+	[CITY][varchar](100) ,
+	[STATE][char](2),
+	[ZIP][int],
+	[EMAIL][nvarchar](50),
+	[PHONE][nvarchar](20)
  CONSTRAINT [PK_SP_ID] PRIMARY KEY CLUSTERED 
 (
 	[specialist_ID] ASC

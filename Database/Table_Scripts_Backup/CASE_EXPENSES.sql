@@ -9,7 +9,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[CASE_EXPENSE](
-	[case_ID] [int] IDENTITY(1,1) NOT NULL,
+	[case_ID] [int]  NOT NULL,
 	[expense_type_ID] [int] NOT NULL,
 	[expense_cost] [money] NULL,
  CONSTRAINT [PK_CASE_EXP_ID] PRIMARY KEY CLUSTERED 

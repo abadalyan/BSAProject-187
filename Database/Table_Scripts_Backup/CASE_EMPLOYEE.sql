@@ -9,7 +9,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[CASE_EMPLOYEE](
-	[case_ID] [int] IDENTITY(1,1) NOT NULL,
+	[case_ID] [int]  NOT NULL,
 	[employee_ID] [int] NOT NULL,
 	[employee_rate] [money] NULL,
 	[START_TIME][datetime] NULL,

@@ -4,8 +4,8 @@
   <DataSources />
   <Reports>
     <ProjectItem>
-      <Name>Report Project6.rdl</Name>
-      <FullPath>F:\NewReport\Report Project6.rdl</FullPath>
+      <Name>Report1.rdl</Name>
+      <FullPath>Report1.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
@@ -13,15 +13,16 @@
       <Name>Debug</Name>
       <Platform>Win32</Platform>
       <Options>
-        <TargetFolder>Report Project6</TargetFolder>
+        <TargetFolder>Report Project1</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <StartItem>Report1.rdl</StartItem>
       </Options>
     </Configuration>
     <Configuration>
       <Name>DebugLocal</Name>
       <Platform>Win32</Platform>
       <Options>
-        <TargetFolder>Report Project6</TargetFolder>
+        <TargetFolder>Report Project1</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
       </Options>
     </Configuration>
@@ -29,7 +30,7 @@
       <Name>Release</Name>
       <Platform>Win32</Platform>
       <Options>
-        <TargetFolder>Report Project6</TargetFolder>
+        <TargetFolder>Report Project1</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
       </Options>
     </Configuration>

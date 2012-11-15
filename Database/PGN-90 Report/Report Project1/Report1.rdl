@@ -4,7 +4,7 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=KALEB-PC\sqlkaleb;Initial Catalog=LawFirmDRM</ConnectString>
+        <ConnectString>Data Source=KALEBM-WIN7\sqlkaleb;Initial Catalog=LawFirmDRM</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:DataSourceID>5ca88ee9-4163-48e4-8c6b-9b0fdace8791</rd:DataSourceID>
@@ -56,14 +56,15 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
     <DataSet Name="Paramater_dataset">
       <Fields>
         <Field Name="case_id">
-          <DataField>case_id</DataField>
+          <DataField>case_ID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <Query>
         <DataSourceName>DataSource1</DataSourceName>
-        <CommandText>select case_id from dbo.COURT_case</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT        case_ID
+FROM            COURT_CASE
+GROUP BY case_ID</CommandText>
       </Query>
     </DataSet>
     <DataSet Name="Total_Expenses">
@@ -72,16 +73,27 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
           <DataField>Expr1</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
+        <Field Name="date">
+          <DataField>date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>DataSource1</DataSourceName>
-        <CommandText>SELECT        SUM(CONVERT(decimal(10, 2), CASE_EXPENSE.expense_cost)) AS Expr1
+        <CommandText>SELECT        SUM(CONVERT(decimal(10, 2), CASE_EXPENSE.expense_cost)) AS Expr1, CASE_EXPENSE.date
 FROM            COURT_CASE INNER JOIN
                          CASE_EXPENSE ON COURT_CASE.case_ID = CASE_EXPENSE.case_ID
-WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
+WHERE        (COURT_CASE.case_ID = @p_case_id) AND (CASE_EXPENSE.date BETWEEN @p_date1 AND @p_date2)
+GROUP BY CASE_EXPENSE.date</CommandText>
         <QueryParameters>
           <QueryParameter Name="@p_case_id">
             <Value>=Parameters!p_case_id.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@p_date1">
+            <Value>=Parameters!p_date1.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@p_date2">
+            <Value>=Parameters!p_date2.Value</Value>
           </QueryParameter>
         </QueryParameters>
       </Query>
@@ -95,7 +107,7 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
       </Fields>
       <Query>
         <DataSourceName>DataSource1</DataSourceName>
-        <CommandText>SELECT        SUM(CASE_EMPLOYEE.employee_rate + CASE_EMPLOYEE.EMPLOYEE_FIXED_COST) AS attorneys_fees
+        <CommandText>SELECT        SUM(CONVERT(decimal(10, 2), CASE_EMPLOYEE.employee_rate + CASE_EMPLOYEE.EMPLOYEE_FIXED_COST)) AS attorneys_fees
 FROM            CASE_EMPLOYEE INNER JOIN
                          COURT_CASE ON CASE_EMPLOYEE.case_ID = COURT_CASE.case_ID
 WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
@@ -116,6 +128,94 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
       <Query>
         <DataSourceName>DataSource1</DataSourceName>
         <CommandText>SELECT        SUM(CASE_EMPLOYEE.CALC_TIME + CASE_EMPLOYEE.HOURS_WORKED) AS total_hours
+FROM            CASE_EMPLOYEE INNER JOIN
+                         COURT_CASE ON CASE_EMPLOYEE.case_ID = COURT_CASE.case_ID
+WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@p_case_id">
+            <Value>=Parameters!p_case_id.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="date">
+          <DataField>date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>SELECT        CASE_EXPENSE.date
+FROM            COURT_CASE INNER JOIN
+                         CASE_EXPENSE ON COURT_CASE.case_ID = CASE_EXPENSE.case_ID
+WHERE        (COURT_CASE.case_ID = @p_case_id)
+GROUP BY CASE_EXPENSE.date</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@p_case_id">
+            <Value>=Parameters!p_case_id.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="Total_Spec_expenses">
+      <Fields>
+        <Field Name="total_spec_expenses">
+          <DataField>total_spec_expenses</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>SELECT        SUM(CONVERT(decimal(10, 2), CASE_SPECIALIST.specialist_rate + CASE_SPECIALIST.SPECIALIST_FIXED_COST)) AS total_spec_expenses
+FROM            CASE_SPECIALIST INNER JOIN
+                         COURT_CASE ON CASE_SPECIALIST.case_ID = COURT_CASE.case_ID
+WHERE        (COURT_CASE.case_ID = @p_case_id) AND (CASE_SPECIALIST.date_specialist BETWEEN @p_s_date1 AND @p_s_date2)
+GROUP BY CASE_SPECIALIST.date_specialist</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@p_case_id">
+            <Value>=Parameters!p_case_id.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@p_s_date1">
+            <Value>=Parameters!p_s_date1.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@p_s_date2">
+            <Value>=Parameters!p_s_date2.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Fields>
+        <Field Name="date_specialist">
+          <DataField>date_specialist</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>SELECT        CASE_SPECIALIST.date_specialist
+FROM            COURT_CASE INNER JOIN
+                         CASE_SPECIALIST ON COURT_CASE.case_ID = CASE_SPECIALIST.case_ID
+WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@p_case_id">
+            <Value>=Parameters!p_case_id.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+    </DataSet>
+    <DataSet Name="DataSet3">
+      <Fields>
+        <Field Name="START_TIME">
+          <DataField>START_TIME</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>SELECT        CASE_EMPLOYEE.START_TIME
 FROM            CASE_EMPLOYEE INNER JOIN
                          COURT_CASE ON CASE_EMPLOYEE.case_ID = COURT_CASE.case_ID
 WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
@@ -209,10 +309,10 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Date</rd:DefaultName>
-        <Top>4.85083in</Top>
+        <Top>4.89944in</Top>
         <Left>1.96542in</Left>
-        <Height>0.15278in</Height>
-        <Width>0.79166in</Width>
+        <Height>0.16667in</Height>
+        <Width>0.95833in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -239,43 +339,11 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Full_Name</rd:DefaultName>
-        <Top>4.85083in</Top>
+        <Top>4.89944in</Top>
         <Left>4.43417in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="total_expenses">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!total_expenses.Value, "Total_Expenses")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>total_expenses</rd:DefaultName>
-        <Top>3.50708in</Top>
-        <Left>7.12167in</Left>
-        <Height>0.13542in</Height>
-        <Width>0.82292in</Width>
-        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -301,11 +369,11 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>client_relationship</rd:DefaultName>
-        <Top>5.03139in</Top>
-        <Left>2.61125in</Left>
+        <Top>5.06611in</Top>
+        <Left>2.50708in</Left>
         <Height>0.15278in</Height>
         <Width>1.60417in</Width>
-        <ZIndex>5</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -332,47 +400,15 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>total_expenses1</rd:DefaultName>
-        <Top>5.35083in</Top>
+        <Top>5.39597in</Top>
         <Left>5.30917in</Left>
         <Height>0.19792in</Height>
         <Width>1in</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
-        </Style>
-      </Textbox>
-      <Textbox Name="attorneys_fees">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!attorneys_fees.Value, "Attorneys_Fees")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>attorneys_fees</rd:DefaultName>
-        <Top>6.05916in</Top>
-        <Left>1.94459in</Left>
-        <Height>0.10417in</Height>
-        <Width>1.03125in</Width>
-        <ZIndex>7</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="total_expenses2">
@@ -392,11 +428,11 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>total_expenses2</rd:DefaultName>
-        <Top>6.05916in</Top>
+        <Top>6.12514in</Top>
         <Left>4.33in</Left>
-        <Height>0.10417in</Height>
+        <Height>0.14584in</Height>
         <Width>1in</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -407,44 +443,14 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="total_hours">
+      <Textbox Name="attorneys_fees">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!total_hours.Value, "Total_Hours")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>total_hours</rd:DefaultName>
-        <Top>3.23625in</Top>
-        <Left>3.66333in</Left>
-        <Height>0.17708in</Height>
-        <Width>0.5625in</Width>
-        <ZIndex>9</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="total_expenses3">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!total_expenses.Value, "Total_Expenses")</Value>
+                <Value>=Sum(Fields!attorneys_fees.Value, "Attorneys_Fees")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -453,12 +459,42 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
             </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>total_expenses</rd:DefaultName>
-        <Top>3.3925in</Top>
-        <Left>4.24319in</Left>
-        <Height>0.13542in</Height>
-        <Width>0.47917in</Width>
-        <ZIndex>10</ZIndex>
+        <rd:DefaultName>attorneys_fees</rd:DefaultName>
+        <Top>6.12514in</Top>
+        <Left>1.96542in</Left>
+        <Height>0.16667in</Height>
+        <Width>0.95833in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="total_spec_expenses">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!total_spec_expenses.Value, "Total_Spec_expenses")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>total_spec_expenses</rd:DefaultName>
+        <Top>3.50708in</Top>
+        <Left>7.12167in</Left>
+        <Height>0.25in</Height>
+        <Width>0.84375in</Width>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -485,11 +521,76 @@ WHERE        (COURT_CASE.case_ID = @p_case_id)</CommandText>
   <ReportParameters>
     <ReportParameter Name="p_case_id">
       <DataType>String</DataType>
-      <Prompt>p_case_id</Prompt>
+      <Hidden>true</Hidden>
       <ValidValues>
         <DataSetReference>
           <DataSetName>Paramater_dataset</DataSetName>
           <ValueField>case_id</ValueField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="p_date1">
+      <DataType>String</DataType>
+      <Prompt>p_date1</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DataSet1</DataSetName>
+          <ValueField>date</ValueField>
+          <LabelField>date</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="p_date2">
+      <DataType>String</DataType>
+      <Prompt>p_date2</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DataSet1</DataSetName>
+          <ValueField>date</ValueField>
+          <LabelField>date</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="p_s_date1">
+      <DataType>String</DataType>
+      <Prompt>p_s_date1</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DataSet2</DataSetName>
+          <ValueField>date_specialist</ValueField>
+          <LabelField>date_specialist</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="p_s_date2">
+      <DataType>String</DataType>
+      <Prompt>p_s_date2</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DataSet2</DataSetName>
+          <ValueField>date_specialist</ValueField>
+          <LabelField>date_specialist</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="p_e_date1">
+      <DataType>String</DataType>
+      <Prompt>p_e_date1</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DataSet3</DataSetName>
+          <ValueField>START_TIME</ValueField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="p_e_date2">
+      <DataType>String</DataType>
+      <Prompt>p_e_date2</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DataSet3</DataSetName>
+          <ValueField>START_TIME</ValueField>
+          <LabelField>START_TIME</LabelField>
         </DataSetReference>
       </ValidValues>
     </ReportParameter>

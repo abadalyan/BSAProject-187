@@ -13,6 +13,7 @@
       <Name>Debug</Name>
       <Platform>Win32</Platform>
       <Options>
+        <TargetServerURL>http://kalebm-win7/ReportServer_SQLKALEB</TargetServerURL>
         <TargetFolder>Report Project1</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
         <StartItem>Report1.rdl</StartItem>

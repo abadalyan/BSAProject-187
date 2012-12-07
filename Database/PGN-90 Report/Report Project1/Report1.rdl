@@ -4,7 +4,7 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=KALEBM-WIN7\sqlkaleb;Initial Catalog=LawFirmDRM</ConnectString>
+        <ConnectString>Data Source=KALEB-PC\sqlkaleb;Initial Catalog=LawFirmDRM</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:DataSourceID>5ca88ee9-4163-48e4-8c6b-9b0fdace8791</rd:DataSourceID>

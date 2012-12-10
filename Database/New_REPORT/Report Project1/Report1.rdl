@@ -4,10 +4,11 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=.\EXPADV;Initial Catalog=LawFirmDRM2</ConnectString>
+        <ConnectString>Data Source=KALEB-PC\sqlkaleb;Initial Catalog=LawFirmDRM</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:DataSourceID>5ca88ee9-4163-48e4-8c6b-9b0fdace8791</rd:DataSourceID>
+      <rd:SecurityType>Windows</rd:SecurityType>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -213,7 +214,7 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>case_number</rd:DefaultName>
-        <Top>2.31611in</Top>
+        <Top>1.99681in</Top>
         <Left>6.78945in</Left>
         <Height>0.19445in</Height>
         <Width>1in</Width>
@@ -240,7 +241,7 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>case_title</rd:DefaultName>
-        <Top>2.31263in</Top>
+        <Top>1.99333in</Top>
         <Left>1.21542in</Left>
         <Height>0.20834in</Height>
         <Width>3.22041in</Width>
@@ -249,38 +250,6 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           <Border>
             <Style>None</Style>
           </Border>
-        </Style>
-      </Textbox>
-      <Textbox Name="hours">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!hours.Value, "expert_data")</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>hours</rd:DefaultName>
-        <Top>3.0557in</Top>
-        <Left>1.56958in</Left>
-        <Height>0.15277in</Height>
-        <Width>0.5625in</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <VerticalAlign>Middle</VerticalAlign>
         </Style>
       </Textbox>
       <Textbox Name="miles">
@@ -303,11 +272,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>miles</rd:DefaultName>
-        <Top>3.4307in</Top>
+        <Top>3.1114in</Top>
         <Left>4.32653in</Left>
         <Height>0.14582in</Height>
         <Width>0.43569in</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -335,11 +304,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>t_miles</rd:DefaultName>
-        <Top>3.43069in</Top>
-        <Left>7.11473in</Left>
+        <Top>3.11139in</Top>
+        <Left>7.12333in</Left>
         <Height>0.15278in</Height>
-        <Width>0.90624in</Width>
-        <ZIndex>4</ZIndex>
+        <Width>0.89764in</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -367,11 +336,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>t_hours</rd:DefaultName>
-        <Top>3.24319in</Top>
-        <Left>7.11473in</Left>
+        <Top>2.94813in</Top>
+        <Left>7.12333in</Left>
         <Height>0.14236in</Height>
-        <Width>0.90624in</Width>
-        <ZIndex>5</ZIndex>
+        <Width>0.91665in</Width>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -398,11 +367,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>total_spec_expenses</rd:DefaultName>
-        <Top>3.60776in</Top>
-        <Left>7.11473in</Left>
+        <Top>3.46376in</Top>
+        <Left>7.12333in</Left>
         <Height>0.14584in</Height>
         <Width>0.90624in</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -428,11 +397,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Date</rd:DefaultName>
-        <Top>5.035in</Top>
+        <Top>4.7157in</Top>
         <Left>1.98625in</Left>
         <Height>0.14236in</Height>
         <Width>1.14236in</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -458,11 +427,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Full_Name</rd:DefaultName>
-        <Top>5.03152in</Top>
+        <Top>4.71222in</Top>
         <Left>4.46889in</Left>
         <Height>0.14584in</Height>
         <Width>1.56591in</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -488,11 +457,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>client_relationship</rd:DefaultName>
-        <Top>5.22929in</Top>
+        <Top>4.90999in</Top>
         <Left>2.60249in</Left>
         <Height>0.14585in</Height>
         <Width>1.6875in</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -520,11 +489,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>total_expenses</rd:DefaultName>
-        <Top>6.27444in</Top>
+        <Top>5.95514in</Top>
         <Left>4.34041in</Left>
         <Height>0.17361in</Height>
         <Width>1in</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -552,11 +521,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>attorneys_fees</rd:DefaultName>
-        <Top>6.28142in</Top>
+        <Top>5.96212in</Top>
         <Left>1.97583in</Left>
         <Height>0.17361in</Height>
         <Width>1in</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -584,47 +553,16 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>attorneys_fees1</rd:DefaultName>
-        <Top>6.64251in</Top>
+        <Top>6.32321in</Top>
         <Left>6.58347in</Left>
         <Height>0.17708in</Height>
         <Width>1.01736in</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
           <VerticalAlign>Middle</VerticalAlign>
-        </Style>
-      </Textbox>
-      <Textbox Name="hourly_rate">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Sum(Fields!hourly_rate.Value, "expert_data")</Value>
-                <Style>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>hourly_rate</rd:DefaultName>
-        <Top>3.23965in</Top>
-        <Left>3.68416in</Left>
-        <Height>0.15625in</Height>
-        <Width>0.51737in</Width>
-        <ZIndex>13</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
         </Style>
       </Textbox>
       <Textbox Name="hourly_rate2">
@@ -647,11 +585,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>hourly_rate</rd:DefaultName>
-        <Top>3.4307in</Top>
+        <Top>3.1114in</Top>
         <Left>5.40458in</Left>
         <Height>0.14583in</Height>
         <Width>0.24305in</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -678,11 +616,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>expenses</rd:DefaultName>
-        <Top>3.78486in</Top>
+        <Top>3.29014in</Top>
         <Left>7.11473in</Left>
         <Height>0.13195in</Height>
         <Width>0.92014in</Width>
-        <ZIndex>15</ZIndex>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -710,11 +648,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.66333in</Top>
+        <Top>0.34403in</Top>
         <Left>0.34736in</Left>
-        <Height>0.13542in</Height>
+        <Height>0.16667in</Height>
         <Width>2.27083in</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -738,11 +676,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.66333in</Top>
+        <Top>0.34403in</Top>
         <Left>3.18417in</Left>
         <Height>0.13542in</Height>
         <Width>0.64583in</Width>
-        <ZIndex>17</ZIndex>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -750,11 +688,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>0.79875in</Top>
+        <Top>0.47945in</Top>
         <Left>3.7675in</Left>
         <Height>0in</Height>
         <Width>1.13542in</Width>
-        <ZIndex>18</ZIndex>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -762,11 +700,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line2">
-        <Top>0.66333in</Top>
+        <Top>0.34403in</Top>
         <Left>0.27792in</Left>
         <Height>0in</Height>
         <Width>7.77083in</Width>
-        <ZIndex>19</ZIndex>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -774,9 +712,33 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line3">
-        <Top>0.67in</Top>
+        <Top>0.3507in</Top>
         <Left>5.0175in</Left>
         <Height>1.19125in</Height>
+        <Width>0in</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line4">
+        <Top>1.0732in</Top>
+        <Left>5.00708in</Left>
+        <Height>0in</Height>
+        <Width>-4.71874in</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line5">
+        <Top>0.3507in</Top>
+        <Left>0.27792in</Left>
+        <Height>7.05583in</Height>
         <Width>0in</Width>
         <ZIndex>20</ZIndex>
         <Style>
@@ -785,11 +747,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line4">
-        <Top>1.3925in</Top>
-        <Left>5.00708in</Left>
-        <Height>0in</Height>
-        <Width>-4.71874in</Width>
+      <Line Name="Line6">
+        <Top>0.3507in</Top>
+        <Left>8.04875in</Left>
+        <Height>7.06583in</Height>
+        <Width>0in</Width>
         <ZIndex>21</ZIndex>
         <Style>
           <Border>
@@ -797,11 +759,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line5">
-        <Top>0.67in</Top>
-        <Left>0.27792in</Left>
-        <Height>7.05583in</Height>
-        <Width>0in</Width>
+      <Line Name="Line7">
+        <Top>7.40653in</Top>
+        <Left>0.28833in</Left>
+        <Height>0in</Height>
+        <Width>7.74654in</Width>
         <ZIndex>22</ZIndex>
         <Style>
           <Border>
@@ -809,11 +771,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line6">
-        <Top>0.67in</Top>
-        <Left>8.04875in</Left>
-        <Height>7.06583in</Height>
-        <Width>0in</Width>
+      <Line Name="Line8">
+        <Top>1.54195in</Top>
+        <Left>0.28834in</Left>
+        <Height>0in</Height>
+        <Width>7.74652in</Width>
         <ZIndex>23</ZIndex>
         <Style>
           <Border>
@@ -821,11 +783,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line7">
-        <Top>7.72583in</Top>
-        <Left>0.28833in</Left>
+      <Line Name="Line9">
+        <Top>1.90653in</Top>
+        <Left>0.28834in</Left>
         <Height>0in</Height>
-        <Width>7.74654in</Width>
+        <Width>7.74653in</Width>
         <ZIndex>24</ZIndex>
         <Style>
           <Border>
@@ -833,36 +795,12 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line8">
-        <Top>1.86125in</Top>
-        <Left>0.28834in</Left>
-        <Height>0in</Height>
-        <Width>7.74652in</Width>
-        <ZIndex>25</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line9">
-        <Top>2.22583in</Top>
-        <Left>0.28834in</Left>
-        <Height>0in</Height>
-        <Width>7.74653in</Width>
-        <ZIndex>26</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
       <Line Name="Line10">
-        <Top>2.54875in</Top>
+        <Top>2.22945in</Top>
         <Left>0.28834in</Left>
         <Height>0in</Height>
         <Width>7.73611in</Width>
-        <ZIndex>27</ZIndex>
+        <ZIndex>25</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -885,11 +823,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.67722in</Top>
+        <Top>0.35792in</Top>
         <Left>5.05917in</Left>
         <Height>0.22569in</Height>
         <Width>1.35417in</Width>
-        <ZIndex>28</ZIndex>
+        <ZIndex>26</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -939,11 +877,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>1.40639in</Top>
+        <Top>1.08709in</Top>
         <Left>0.33347in</Left>
         <Height>0.44097in</Height>
         <Width>3.75346in</Width>
-        <ZIndex>29</ZIndex>
+        <ZIndex>27</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -966,11 +904,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>1.87514in</Top>
+        <Top>1.55584in</Top>
         <Left>1.62154in</Left>
         <Height>0.17708in</Height>
         <Width>5.54167in</Width>
-        <ZIndex>30</ZIndex>
+        <ZIndex>28</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1010,11 +948,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>2.06611in</Top>
+        <Top>1.74681in</Top>
         <Left>1.94111in</Left>
         <Height>0.14236in</Height>
         <Width>4.58681in</Width>
-        <ZIndex>31</ZIndex>
+        <ZIndex>29</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1038,11 +976,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>2.24in</Top>
+        <Top>1.9207in</Top>
         <Left>0.34736in</Left>
         <Height>0.13167in</Height>
         <Width>0.85417in</Width>
-        <ZIndex>32</ZIndex>
+        <ZIndex>30</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1080,11 +1018,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>2.55917in</Top>
+        <Top>2.23987in</Top>
         <Left>0.28833in</Left>
         <Height>0.17708in</Height>
         <Width>7.74654in</Width>
-        <ZIndex>33</ZIndex>
+        <ZIndex>31</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1134,11 +1072,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>2.78139in</Top>
+        <Top>2.46209in</Top>
         <Left>0.33347in</Left>
         <Height>0.24653in</Height>
         <Width>2.16667in</Width>
-        <ZIndex>34</ZIndex>
+        <ZIndex>32</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1162,11 +1100,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.06959in</Top>
+        <Top>2.75029in</Top>
         <Left>0.34736in</Left>
         <Height>0.16429in</Height>
         <Width>1.11458in</Width>
-        <ZIndex>35</ZIndex>
+        <ZIndex>33</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1189,11 +1127,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>3.43069in</Top>
+        <Top>3.11139in</Top>
         <Left>0.33347in</Left>
         <Height>0.14583in</Height>
         <Width>1.11458in</Width>
-        <ZIndex>36</ZIndex>
+        <ZIndex>34</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1216,11 +1154,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>3.61125in</Top>
+        <Top>3.29195in</Top>
         <Left>0.33347in</Left>
         <Height>0.17361in</Height>
         <Width>1.23958in</Width>
-        <ZIndex>37</ZIndex>
+        <ZIndex>35</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1243,11 +1181,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>3.78486in</Top>
+        <Top>3.46556in</Top>
         <Left>0.34736in</Left>
         <Height>0.14236in</Height>
         <Width>0.4375in</Width>
-        <ZIndex>38</ZIndex>
+        <ZIndex>36</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1288,11 +1226,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox20</rd:DefaultName>
-        <Top>3.94111in</Top>
+        <Top>3.63681in</Top>
         <Left>0.34736in</Left>
-        <Height>0.4132in</Height>
+        <Height>0.42597in</Height>
         <Width>3.04167in</Width>
-        <ZIndex>39</ZIndex>
+        <ZIndex>37</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1304,11 +1242,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line22">
-        <Top>4.38208in</Top>
+        <Top>4.08361in</Top>
         <Left>0.28833in</Left>
         <Height>0in</Height>
         <Width>7.74653in</Width>
-        <ZIndex>40</ZIndex>
+        <ZIndex>38</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1316,11 +1254,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line23">
-        <Top>2.73625in</Top>
+        <Top>2.41695in</Top>
         <Left>3.44458in</Left>
-        <Height>1.64583in</Height>
+        <Height>1.66666in</Height>
         <Width>0in</Width>
-        <ZIndex>41</ZIndex>
+        <ZIndex>39</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1344,11 +1282,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>2.78139in</Top>
+        <Top>2.46209in</Top>
         <Left>3.52278in</Left>
         <Height>0.13194in</Height>
         <Width>4.51208in</Width>
-        <ZIndex>42</ZIndex>
+        <ZIndex>40</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1373,11 +1311,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>2.91332in</Top>
+        <Top>2.59402in</Top>
         <Left>3.50527in</Left>
         <Height>0.31598in</Height>
         <Width>3.89584in</Width>
-        <ZIndex>43</ZIndex>
+        <ZIndex>41</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1401,11 +1339,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>3.25014in</Top>
+        <Top>2.93084in</Top>
         <Left>3.50527in</Left>
         <Height>0.15278in</Height>
         <Width>0.165in</Width>
-        <ZIndex>44</ZIndex>
+        <ZIndex>42</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1429,11 +1367,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>3.42375in</Top>
+        <Top>3.10445in</Top>
         <Left>3.50527in</Left>
         <Height>0.16431in</Height>
         <Width>0.68403in</Width>
-        <ZIndex>45</ZIndex>
+        <ZIndex>43</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1457,11 +1395,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>3.60083in</Top>
+        <Top>3.28153in</Top>
         <Left>3.50527in</Left>
         <Height>0.16319in</Height>
         <Width>0.78472in</Width>
-        <ZIndex>46</ZIndex>
+        <ZIndex>44</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1486,11 +1424,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>3.78486in</Top>
+        <Top>3.46556in</Top>
         <Left>5.05917in</Left>
         <Height>0.14236in</Height>
         <Width>0.5625in</Width>
-        <ZIndex>47</ZIndex>
+        <ZIndex>45</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1531,11 +1469,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>3.99667in</Top>
+        <Top>3.67737in</Top>
         <Left>3.45847in</Left>
         <Height>0.38541in</Height>
         <Width>4.57639in</Width>
-        <ZIndex>48</ZIndex>
+        <ZIndex>46</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1562,11 +1500,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox35</rd:DefaultName>
-        <Top>4.40986in</Top>
+        <Top>4.09056in</Top>
         <Left>0.34736in</Left>
         <Height>0.14931in</Height>
         <Width>3.85417in</Width>
-        <ZIndex>49</ZIndex>
+        <ZIndex>47</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1591,11 +1529,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox36</rd:DefaultName>
-        <Top>4.55917in</Top>
+        <Top>4.23987in</Top>
         <Left>0.34736in</Left>
         <Height>0.2882in</Height>
         <Width>7.57979in</Width>
-        <ZIndex>50</ZIndex>
+        <ZIndex>48</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1619,11 +1557,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox37</rd:DefaultName>
-        <Top>4.86126in</Top>
+        <Top>4.54196in</Top>
         <Left>0.33347in</Left>
         <Height>0.1493in</Height>
         <Width>2.41667in</Width>
-        <ZIndex>51</ZIndex>
+        <ZIndex>49</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1631,11 +1569,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line39">
-        <Top>6.92375in</Top>
+        <Top>6.60445in</Top>
         <Left>0.28833in</Left>
         <Height>0in</Height>
         <Width>7.74653in</Width>
-        <ZIndex>52</ZIndex>
+        <ZIndex>50</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1643,11 +1581,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line41">
-        <Top>7.55917in</Top>
+        <Top>7.23987in</Top>
         <Left>0.55917in</Left>
         <Height>0in</Height>
         <Width>3.11111in</Width>
-        <ZIndex>53</ZIndex>
+        <ZIndex>51</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1655,11 +1593,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line49">
-        <Top>9.43417in</Top>
+        <Top>9.11487in</Top>
         <Left>0.30917in</Left>
         <Height>0in</Height>
         <Width>7.72569in</Width>
-        <ZIndex>54</ZIndex>
+        <ZIndex>52</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1667,11 +1605,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line50">
-        <Top>10.25708in</Top>
+        <Top>9.93778in</Top>
         <Left>0.37167in</Left>
         <Height>0in</Height>
         <Width>7.69792in</Width>
-        <ZIndex>55</ZIndex>
+        <ZIndex>53</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1695,11 +1633,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.0418in</Top>
+        <Top>4.7225in</Top>
         <Left>0.59389in</Left>
         <Height>0.17362in</Height>
         <Width>0.19097in</Width>
-        <ZIndex>56</ZIndex>
+        <ZIndex>54</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1723,11 +1661,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.40292in</Top>
+        <Top>5.08362in</Top>
         <Left>0.59389in</Left>
         <Height>0.17362in</Height>
         <Width>0.19097in</Width>
-        <ZIndex>57</ZIndex>
+        <ZIndex>55</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1751,11 +1689,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.75016in</Top>
+        <Top>5.43086in</Top>
         <Left>0.59389in</Left>
         <Height>0.17362in</Height>
         <Width>0.19097in</Width>
-        <ZIndex>58</ZIndex>
+        <ZIndex>56</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1779,11 +1717,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.11125in</Top>
+        <Top>5.79195in</Top>
         <Left>0.59389in</Left>
         <Height>0.17362in</Height>
         <Width>0.19097in</Width>
-        <ZIndex>59</ZIndex>
+        <ZIndex>57</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1807,11 +1745,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.29876in</Top>
+        <Top>5.97946in</Top>
         <Left>0.59389in</Left>
         <Height>0.15627in</Height>
         <Width>0.19097in</Width>
-        <ZIndex>60</ZIndex>
+        <ZIndex>58</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1835,11 +1773,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.04875in</Top>
+        <Top>4.72945in</Top>
         <Left>0.79875in</Left>
         <Height>0.1493in</Height>
         <Width>1.14583in</Width>
-        <ZIndex>61</ZIndex>
+        <ZIndex>59</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1863,11 +1801,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.21903in</Top>
+        <Top>4.89973in</Top>
         <Left>0.88888in</Left>
         <Height>0.17in</Height>
         <Width>1.6807in</Width>
-        <ZIndex>62</ZIndex>
+        <ZIndex>60</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1891,11 +1829,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.40292in</Top>
+        <Top>5.08362in</Top>
         <Left>0.81264in</Left>
         <Height>0.16334in</Height>
         <Width>4.44452in</Width>
-        <ZIndex>63</ZIndex>
+        <ZIndex>61</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1919,11 +1857,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.58015in</Top>
+        <Top>5.26085in</Top>
         <Left>0.82653in</Left>
         <Height>0.15612in</Height>
         <Width>5.04514in</Width>
-        <ZIndex>64</ZIndex>
+        <ZIndex>62</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1947,11 +1885,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.75016in</Top>
+        <Top>5.43086in</Top>
         <Left>0.79875in</Left>
         <Height>0.17in</Height>
         <Width>4.3298in</Width>
-        <ZIndex>65</ZIndex>
+        <ZIndex>63</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1975,11 +1913,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.92736in</Top>
+        <Top>5.60806in</Top>
         <Left>0.88888in</Left>
         <Height>0.17in</Height>
         <Width>4.31612in</Width>
-        <ZIndex>66</ZIndex>
+        <ZIndex>64</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2003,11 +1941,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.10444in</Top>
+        <Top>5.78514in</Top>
         <Left>0.79875in</Left>
         <Height>0.17in</Height>
         <Width>4.44452in</Width>
-        <ZIndex>67</ZIndex>
+        <ZIndex>65</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2031,11 +1969,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.29876in</Top>
+        <Top>5.97946in</Top>
         <Left>0.79875in</Left>
         <Height>0.15627in</Height>
         <Width>0.98958in</Width>
-        <ZIndex>68</ZIndex>
+        <ZIndex>66</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2061,11 +1999,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.30222in</Top>
+        <Top>5.98292in</Top>
         <Left>5.47221in</Left>
         <Height>0.17in</Height>
         <Width>1.88904in</Width>
-        <ZIndex>69</ZIndex>
+        <ZIndex>67</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2098,11 +2036,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.46892in</Top>
+        <Top>6.14962in</Top>
         <Left>0.75708in</Left>
         <Height>0.1597in</Height>
         <Width>4.58333in</Width>
-        <ZIndex>70</ZIndex>
+        <ZIndex>68</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2128,11 +2066,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.64251in</Top>
+        <Top>6.32321in</Top>
         <Left>1.94111in</Left>
         <Height>0.18359in</Height>
         <Width>3.68056in</Width>
-        <ZIndex>71</ZIndex>
+        <ZIndex>69</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2156,11 +2094,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.95153in</Top>
+        <Top>6.63223in</Top>
         <Left>0.34736in</Left>
         <Height>0.15972in</Height>
         <Width>7.44209in</Width>
-        <ZIndex>72</ZIndex>
+        <ZIndex>70</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2184,11 +2122,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>7.11833in</Top>
+        <Top>6.79903in</Top>
         <Left>0.34736in</Left>
         <Height>0.17in</Height>
         <Width>3.73957in</Width>
-        <ZIndex>73</ZIndex>
+        <ZIndex>71</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2196,11 +2134,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line52">
-        <Top>7.56028in</Top>
+        <Top>7.24098in</Top>
         <Left>0.53944in</Left>
         <Height>0in</Height>
         <Width>3.13083in</Width>
-        <ZIndex>74</ZIndex>
+        <ZIndex>72</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2208,11 +2146,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line53">
-        <Top>7.55333in</Top>
+        <Top>7.23403in</Top>
         <Left>4.58111in</Left>
         <Height>0in</Height>
         <Width>2.78015in</Width>
-        <ZIndex>75</ZIndex>
+        <ZIndex>73</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2234,11 +2172,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>7.5661in</Top>
+        <Top>7.2468in</Top>
         <Left>1.76167in</Left>
         <Height>0.14584in</Height>
         <Width>1.10416in</Width>
-        <ZIndex>76</ZIndex>
+        <ZIndex>74</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2270,11 +2208,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>7.56028in</Top>
+        <Top>7.24098in</Top>
         <Left>5.32306in</Left>
         <Height>0.15166in</Height>
         <Width>1.27416in</Width>
-        <ZIndex>77</ZIndex>
+        <ZIndex>75</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2308,11 +2246,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>7.73972in</Top>
+        <Top>7.42042in</Top>
         <Left>0.27792in</Left>
         <Height>0.18389in</Height>
         <Width>1.71188in</Width>
-        <ZIndex>78</ZIndex>
+        <ZIndex>76</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2336,11 +2274,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>7.75361in</Top>
+        <Top>7.43431in</Top>
         <Left>3.96889in</Left>
         <Height>0.15611in</Height>
         <Width>0.56605in</Width>
-        <ZIndex>79</ZIndex>
+        <ZIndex>77</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2364,11 +2302,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>7.92361in</Top>
+        <Top>7.60431in</Top>
         <Left>0.34736in</Left>
         <Height>0.17in</Height>
         <Width>6.0973in</Width>
-        <ZIndex>80</ZIndex>
+        <ZIndex>78</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2392,11 +2330,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>8.10403in</Top>
+        <Top>7.78473in</Top>
         <Left>0.59389in</Left>
         <Height>0.17in</Height>
         <Width>0.60764in</Width>
-        <ZIndex>81</ZIndex>
+        <ZIndex>79</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2420,11 +2358,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>8.28792in</Top>
+        <Top>7.96862in</Top>
         <Left>0.59389in</Left>
         <Height>0.17in</Height>
         <Width>0.85417in</Width>
-        <ZIndex>82</ZIndex>
+        <ZIndex>80</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2448,11 +2386,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>8.47181in</Top>
+        <Top>8.15251in</Top>
         <Left>0.59389in</Left>
         <Height>0.18389in</Height>
         <Width>0.76042in</Width>
-        <ZIndex>83</ZIndex>
+        <ZIndex>81</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2477,11 +2415,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>8.65569in</Top>
+        <Top>8.33639in</Top>
         <Left>1.17209in</Left>
         <Height>0.15in</Height>
         <Width>0.5086in</Width>
-        <ZIndex>84</ZIndex>
+        <ZIndex>82</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2506,11 +2444,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>8.81958in</Top>
+        <Top>8.50028in</Top>
         <Left>0.33347in</Left>
         <Height>0.17in</Height>
         <Width>3.44097in</Width>
-        <ZIndex>85</ZIndex>
+        <ZIndex>83</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2534,11 +2472,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>8.81958in</Top>
+        <Top>8.50028in</Top>
         <Left>4.00014in</Left>
         <Height>0.17in</Height>
         <Width>0.90625in</Width>
-        <ZIndex>86</ZIndex>
+        <ZIndex>84</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2547,11 +2485,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
       </Textbox>
       <Rectangle Name="Rectangle6">
         <KeepTogether>true</KeepTogether>
-        <Top>8.83347in</Top>
+        <Top>8.51417in</Top>
         <Left>4.94806in</Left>
         <Height>0.11792in</Height>
         <Width>0.11105in</Width>
-        <ZIndex>87</ZIndex>
+        <ZIndex>85</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2575,11 +2513,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>8.81958in</Top>
+        <Top>8.50028in</Top>
         <Left>5.12855in</Left>
         <Height>0.17in</Height>
         <Width>0.90625in</Width>
-        <ZIndex>88</ZIndex>
+        <ZIndex>86</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2603,11 +2541,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>9.0975in</Top>
+        <Top>8.7782in</Top>
         <Left>0.33347in</Left>
         <Height>0.17in</Height>
         <Width>2.18056in</Width>
-        <ZIndex>89</ZIndex>
+        <ZIndex>87</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2632,11 +2570,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>9.2675in</Top>
+        <Top>8.9482in</Top>
         <Left>5.67015in</Left>
         <Height>0.15278in</Height>
         <Width>1.49306in</Width>
-        <ZIndex>90</ZIndex>
+        <ZIndex>88</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2661,11 +2599,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>9.44806in</Top>
+        <Top>9.12876in</Top>
         <Left>1.22583in</Left>
         <Height>0.14222in</Height>
         <Width>6.06951in</Width>
-        <ZIndex>91</ZIndex>
+        <ZIndex>89</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2690,11 +2628,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>9.60417in</Top>
+        <Top>9.28487in</Top>
         <Left>2.68764in</Left>
         <Height>0.17in</Height>
         <Width>3.44097in</Width>
-        <ZIndex>92</ZIndex>
+        <ZIndex>90</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2719,11 +2657,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>9.78806in</Top>
+        <Top>9.46876in</Top>
         <Left>1.04709in</Left>
         <Height>0.14917in</Height>
         <Width>6.37153in</Width>
-        <ZIndex>93</ZIndex>
+        <ZIndex>91</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2748,11 +2686,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>10.27097in</Top>
+        <Top>9.95167in</Top>
         <Left>0.37167in</Left>
         <Height>0.15611in</Height>
         <Width>0.98264in</Width>
-        <ZIndex>94</ZIndex>
+        <ZIndex>92</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2760,11 +2698,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line55">
-        <Top>2.24in</Top>
+        <Top>1.9207in</Top>
         <Left>5.69917in</Left>
         <Height>0.29431in</Height>
         <Width>0in</Width>
-        <ZIndex>95</ZIndex>
+        <ZIndex>93</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2788,11 +2726,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>2.25361in</Top>
+        <Top>1.93431in</Top>
         <Left>5.75472in</Left>
         <Height>0.14584in</Height>
         <Width>1.02084in</Width>
-        <ZIndex>96</ZIndex>
+        <ZIndex>94</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2801,11 +2739,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
       </Textbox>
       <Rectangle Name="Rectangle5">
         <KeepTogether>true</KeepTogether>
-        <Top>8.83347in</Top>
+        <Top>8.51417in</Top>
         <Left>3.81964in</Left>
         <Height>0.11792in</Height>
         <Width>0.11105in</Width>
-        <ZIndex>97</ZIndex>
+        <ZIndex>95</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2829,11 +2767,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>9.0975in</Top>
+        <Top>8.7782in</Top>
         <Left>4.98265in</Left>
         <Height>0.17in</Height>
         <Width>2.74318in</Width>
-        <ZIndex>98</ZIndex>
+        <ZIndex>96</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2858,11 +2796,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>8.12139in</Top>
+        <Top>7.80209in</Top>
         <Left>2.39597in</Left>
         <Height>0.15973in</Height>
         <Width>1.59028in</Width>
-        <ZIndex>99</ZIndex>
+        <ZIndex>97</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2887,11 +2825,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>8.29501in</Top>
+        <Top>7.97571in</Top>
         <Left>2.39597in</Left>
         <Height>0.15973in</Height>
         <Width>1.59028in</Width>
-        <ZIndex>100</ZIndex>
+        <ZIndex>98</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2916,11 +2854,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>8.47181in</Top>
+        <Top>8.15251in</Top>
         <Left>2.39597in</Left>
         <Height>0.15973in</Height>
         <Width>1.59028in</Width>
-        <ZIndex>101</ZIndex>
+        <ZIndex>99</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2945,11 +2883,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>8.64596in</Top>
+        <Top>8.32666in</Top>
         <Left>2.39597in</Left>
         <Height>0.15973in</Height>
         <Width>1.59028in</Width>
-        <ZIndex>102</ZIndex>
+        <ZIndex>100</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2973,11 +2911,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.24777in</Top>
+        <Top>2.92847in</Top>
         <Left>0.69459in</Left>
         <Height>0.16667in</Height>
         <Width>0.65972in</Width>
-        <ZIndex>103</ZIndex>
+        <ZIndex>101</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3002,11 +2940,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>3.25014in</Top>
+        <Top>2.93084in</Top>
         <Left>6.95847in</Left>
         <Height>0.15973in</Height>
-        <Width>0.15626in</Width>
-        <ZIndex>104</ZIndex>
+        <Width>0.14237in</Width>
+        <ZIndex>102</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3031,11 +2969,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>3.43069in</Top>
+        <Top>3.11139in</Top>
         <Left>6.95847in</Left>
         <Height>0.15973in</Height>
         <Width>0.12848in</Width>
-        <ZIndex>105</ZIndex>
+        <ZIndex>103</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3060,11 +2998,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>3.6043in</Top>
+        <Top>3.285in</Top>
         <Left>6.95847in</Left>
         <Height>0.15973in</Height>
         <Width>0.14237in</Width>
-        <ZIndex>106</ZIndex>
+        <ZIndex>104</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3089,11 +3027,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>3.78486in</Top>
+        <Top>3.46556in</Top>
         <Left>6.95847in</Left>
         <Height>0.15973in</Height>
         <Width>0.14237in</Width>
-        <ZIndex>107</ZIndex>
+        <ZIndex>105</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3101,7 +3039,31 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line57">
-        <Top>3.22694in</Top>
+        <Top>2.90764in</Top>
+        <Left>1.54639in</Left>
+        <Height>0in</Height>
+        <Width>1.74306in</Width>
+        <ZIndex>106</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line58">
+        <Top>3.09514in</Top>
+        <Left>1.36583in</Left>
+        <Height>0in</Height>
+        <Width>1.92361in</Width>
+        <ZIndex>107</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line59">
+        <Top>3.26876in</Top>
         <Left>1.54639in</Left>
         <Height>0in</Height>
         <Width>1.74306in</Width>
@@ -3112,11 +3074,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line58">
-        <Top>3.41444in</Top>
-        <Left>1.36583in</Left>
+      <Line Name="Line60">
+        <Top>3.44237in</Top>
+        <Left>1.76167in</Left>
         <Height>0in</Height>
-        <Width>1.92361in</Width>
+        <Width>1.52778in</Width>
         <ZIndex>109</ZIndex>
         <Style>
           <Border>
@@ -3124,11 +3086,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line59">
-        <Top>3.58806in</Top>
-        <Left>1.54639in</Left>
+      <Line Name="Line62">
+        <Top>3.62292in</Top>
+        <Left>1.36584in</Left>
         <Height>0in</Height>
-        <Width>1.74306in</Width>
+        <Width>1.92361in</Width>
         <ZIndex>110</ZIndex>
         <Style>
           <Border>
@@ -3136,11 +3098,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line60">
-        <Top>3.76167in</Top>
-        <Left>1.76167in</Left>
+      <Line Name="Line63">
+        <Top>2.41695in</Top>
+        <Left>0.28833in</Left>
         <Height>0in</Height>
-        <Width>1.52778in</Width>
+        <Width>7.74653in</Width>
         <ZIndex>111</ZIndex>
         <Style>
           <Border>
@@ -3148,11 +3110,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line62">
-        <Top>3.94222in</Top>
-        <Left>1.36584in</Left>
+      <Line Name="Line64">
+        <Top>9.10445in</Top>
+        <Left>0.31958in</Left>
         <Height>0in</Height>
-        <Width>1.92361in</Width>
+        <Width>7.72917in</Width>
         <ZIndex>112</ZIndex>
         <Style>
           <Border>
@@ -3160,11 +3122,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line63">
-        <Top>2.73625in</Top>
-        <Left>0.28833in</Left>
+      <Line Name="Line13">
+        <Top>3.62695in</Top>
+        <Left>7.11292in</Left>
         <Height>0in</Height>
-        <Width>7.74653in</Width>
+        <Width>0.92195in</Width>
         <ZIndex>113</ZIndex>
         <Style>
           <Border>
@@ -3172,11 +3134,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line64">
-        <Top>9.42375in</Top>
-        <Left>0.31958in</Left>
+      <Line Name="Line14">
+        <Top>3.44987in</Top>
+        <Left>7.11813in</Left>
         <Height>0in</Height>
-        <Width>7.72917in</Width>
+        <Width>0.91674in</Width>
         <ZIndex>114</ZIndex>
         <Style>
           <Border>
@@ -3184,11 +3146,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line13">
-        <Top>3.94625in</Top>
-        <Left>7.11292in</Left>
+      <Line Name="Line15">
+        <Top>3.27799in</Top>
+        <Left>7.11813in</Left>
         <Height>0in</Height>
-        <Width>0.92195in</Width>
+        <Width>0.91674in</Width>
         <ZIndex>115</ZIndex>
         <Style>
           <Border>
@@ -3196,36 +3158,12 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Border>
         </Style>
       </Line>
-      <Line Name="Line14">
-        <Top>3.76917in</Top>
-        <Left>7.11813in</Left>
-        <Height>0in</Height>
-        <Width>0.91674in</Width>
-        <ZIndex>116</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Line Name="Line15">
-        <Top>3.59729in</Top>
-        <Left>7.11813in</Left>
-        <Height>0in</Height>
-        <Width>0.91674in</Width>
-        <ZIndex>117</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
       <Line Name="Line16">
-        <Top>3.40979in</Top>
+        <Top>3.09049in</Top>
         <Left>7.12333in</Left>
         <Height>0in</Height>
         <Width>0.91153in</Width>
-        <ZIndex>118</ZIndex>
+        <ZIndex>116</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3249,11 +3187,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>3.23973in</Top>
+        <Top>2.92043in</Top>
         <Left>4.27439in</Left>
         <Height>0.16319in</Height>
         <Width>0.632in</Width>
-        <ZIndex>119</ZIndex>
+        <ZIndex>117</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3261,11 +3199,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line17">
-        <Top>3.40979in</Top>
+        <Top>3.09049in</Top>
         <Left>3.68063in</Left>
         <Height>0in</Height>
         <Width>0.61813in</Width>
-        <ZIndex>120</ZIndex>
+        <ZIndex>118</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3292,11 +3230,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>hourly_rate</rd:DefaultName>
-        <Top>3.23277in</Top>
+        <Top>2.91347in</Top>
         <Left>4.97583in</Left>
         <Height>0.15625in</Height>
         <Width>0.51737in</Width>
-        <ZIndex>121</ZIndex>
+        <ZIndex>119</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3304,11 +3242,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line18">
-        <Top>3.39938in</Top>
+        <Top>3.08008in</Top>
         <Left>4.92542in</Left>
         <Height>0in</Height>
         <Width>0.56778in</Width>
-        <ZIndex>122</ZIndex>
+        <ZIndex>120</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3332,11 +3270,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>3.23973in</Top>
+        <Top>2.92043in</Top>
         <Left>5.56264in</Left>
         <Height>0.16319in</Height>
         <Width>0.632in</Width>
-        <ZIndex>123</ZIndex>
+        <ZIndex>121</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3360,11 +3298,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>3.42367in</Top>
+        <Top>3.10437in</Top>
         <Left>4.22583in</Left>
         <Height>0.15285in</Height>
         <Width>0.08681in</Width>
-        <ZIndex>124</ZIndex>
+        <ZIndex>122</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3388,11 +3326,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>3.42375in</Top>
+        <Top>3.10445in</Top>
         <Left>4.77611in</Left>
         <Height>0.16431in</Height>
         <Width>0.61459in</Width>
-        <ZIndex>125</ZIndex>
+        <ZIndex>123</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3416,11 +3354,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>3.42367in</Top>
+        <Top>3.10437in</Top>
         <Left>5.67541in</Left>
         <Height>0.16319in</Height>
         <Width>0.632in</Width>
-        <ZIndex>126</ZIndex>
+        <ZIndex>124</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3445,11 +3383,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>6.64251in</Top>
+        <Top>6.32321in</Top>
         <Left>5.92369in</Left>
         <Height>0.17708in</Height>
         <Width>0.632in</Width>
-        <ZIndex>127</ZIndex>
+        <ZIndex>125</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3457,11 +3395,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line11">
-        <Top>6.82125in</Top>
+        <Top>6.50195in</Top>
         <Left>6.56604in</Left>
         <Height>0in</Height>
         <Width>1.03479in</Width>
-        <ZIndex>128</ZIndex>
+        <ZIndex>126</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3469,11 +3407,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line12">
-        <Top>6.46188in</Top>
+        <Top>6.14258in</Top>
         <Left>1.96188in</Left>
         <Height>0in</Height>
         <Width>1.01395in</Width>
-        <ZIndex>129</ZIndex>
+        <ZIndex>127</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3481,11 +3419,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Line>
       <Line Name="Line19">
-        <Top>6.46188in</Top>
+        <Top>6.14258in</Top>
         <Left>4.33167in</Left>
         <Height>0in</Height>
         <Width>1.09888in</Width>
-        <ZIndex>130</ZIndex>
+        <ZIndex>128</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3509,11 +3447,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>6.28487in</Top>
+        <Top>5.96557in</Top>
         <Left>3.50527in</Left>
         <Height>0.15627in</Height>
         <Width>0.7657in</Width>
-        <ZIndex>131</ZIndex>
+        <ZIndex>129</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3521,11 +3459,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line20">
-        <Top>5.38896in</Top>
+        <Top>5.06966in</Top>
         <Left>2.58688in</Left>
         <Height>0in</Height>
         <Width>1.72576in</Width>
-        <ZIndex>132</ZIndex>
+        <ZIndex>130</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3549,11 +3487,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.21887in</Top>
+        <Top>4.89957in</Top>
         <Left>4.35943in</Left>
         <Height>0.15627in</Height>
         <Width>0.09028in</Width>
-        <ZIndex>133</ZIndex>
+        <ZIndex>131</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3561,11 +3499,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line21">
-        <Top>5.20667in</Top>
+        <Top>4.88737in</Top>
         <Left>1.9775in</Left>
         <Height>0in</Height>
         <Width>1.15111in</Width>
-        <ZIndex>134</ZIndex>
+        <ZIndex>132</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -3589,11 +3527,11 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>5.03482in</Top>
+        <Top>4.71552in</Top>
         <Left>3.25362in</Left>
         <Height>0.15627in</Height>
         <Width>1.20139in</Width>
-        <ZIndex>135</ZIndex>
+        <ZIndex>133</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3601,19 +3539,54 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         </Style>
       </Textbox>
       <Line Name="Line24">
-        <Top>5.21188in</Top>
+        <Top>4.89258in</Top>
         <Left>4.48792in</Left>
         <Height>0in</Height>
         <Width>2.04in</Width>
-        <ZIndex>136</ZIndex>
+        <ZIndex>134</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
           </Border>
         </Style>
       </Line>
+      <Textbox Name="hours1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!hours.Value, "expert_data")</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>hours1</rd:DefaultName>
+        <Top>2.92043in</Top>
+        <Left>3.68416in</Left>
+        <Height>0.16319in</Height>
+        <Width>0.54856in</Width>
+        <ZIndex>135</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>11in</Height>
+    <Height>10.40986in</Height>
     <Style>
       <Border>
         <Style>None</Style>
@@ -3656,7 +3629,7 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
       </ValidValues>
     </ReportParameter>
   </ReportParameters>
-  <Width>8.57313in</Width>
+  <Width>8.38563in</Width>
   <Page>
     <InteractiveHeight>11in</InteractiveHeight>
     <InteractiveWidth>8.5in</InteractiveWidth>

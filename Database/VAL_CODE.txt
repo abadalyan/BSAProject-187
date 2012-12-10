@@ -1,0 +1,68 @@
+       Private Sub END_TIME_Validate(results As EntityValidationResultsBuilder)
+            If Me.END_TIME < Me.START_TIME Then
+                results.AddPropertyError("End_time cannot be before start_time")
+            End If
+
+        End Sub
+
+        Private Sub START_TIME_Validate(results As EntityValidationResultsBuilder)
+            If Me.START_TIME > Me.END_TIME Then
+                results.AddPropertyError("start time cannot be after end time")
+            End If
+
+        End Sub
+
+        Private Sub e_miles_Validate(results As EntityValidationResultsBuilder)
+            If e_miles Is Nothing Then
+                e_miles = 0
+            End If
+
+        End Sub
+
+        Private Sub EMPLOYEE_FIXED_COST_Validate(results As EntityValidationResultsBuilder)
+            If EMPLOYEE_FIXED_COST Is Nothing Then
+                EMPLOYEE_FIXED_COST = 0
+            End If
+
+        End Sub
+
+        Private Sub Employee_Rate_Validate(results As EntityValidationResultsBuilder)
+            If Employee_Rate Is Nothing Then
+                Employee_Rate = 0
+            End If
+
+        End Sub
+        
+	Private Sub expense_cost_Validate(results As EntityValidationResultsBuilder)
+            If expense_cost Is Nothing Then
+                expense_cost = 0
+            End If
+
+        End Sub
+
+        Private Sub s_miles_Validate(results As EntityValidationResultsBuilder)
+            If s_miles Is Nothing Then
+                s_miles = 0
+            End If
+        End Sub
+
+        Private Sub hours_Validate(results As EntityValidationResultsBuilder)
+            If hours Is Nothing Then
+                hours = 0
+            End If
+
+        End Sub
+
+        Private Sub Specialist_Rate_Validate(results As EntityValidationResultsBuilder)
+            If Specialist_Rate Is Nothing Then
+                Specialist_Rate = 0
+            End If
+
+        End Sub
+
+        Private Sub SPECIALIST_FIXED_COST_Validate(results As EntityValidationResultsBuilder)
+            If SPECIALIST_FIXED_COST Is Nothing Then
+                SPECIALIST_FIXED_COST = 0
+            End If
+
+        End Sub

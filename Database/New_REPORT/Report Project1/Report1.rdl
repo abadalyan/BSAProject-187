@@ -4,11 +4,10 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=KALEB-PC\sqlkaleb;Initial Catalog=LawFirmDRM</ConnectString>
+        <ConnectString>Data Source=.\EXPADV;Initial Catalog=LawFirmDRM2</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:DataSourceID>5ca88ee9-4163-48e4-8c6b-9b0fdace8791</rd:DataSourceID>
-      <rd:SecurityType>Windows</rd:SecurityType>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -272,7 +271,7 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>miles</rd:DefaultName>
-        <Top>3.1114in</Top>
+        <Top>3.12175in</Top>
         <Left>4.32653in</Left>
         <Height>0.14582in</Height>
         <Width>0.43569in</Width>
@@ -585,8 +584,8 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>hourly_rate</rd:DefaultName>
-        <Top>3.1114in</Top>
-        <Left>5.40458in</Left>
+        <Top>3.12529in</Top>
+        <Left>5.40459in</Left>
         <Height>0.14583in</Height>
         <Width>0.24305in</Width>
         <ZIndex>12</ZIndex>
@@ -1235,10 +1234,6 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           <Border>
             <Style>None</Style>
           </Border>
-          <BackgroundImage>
-            <Source>External</Source>
-            <Value>PGN90Image</Value>
-          </BackgroundImage>
         </Style>
       </Textbox>
       <Line Name="Line22">
@@ -1367,9 +1362,9 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>3.10445in</Top>
+        <Top>3.12175in</Top>
         <Left>3.50527in</Left>
-        <Height>0.16431in</Height>
+        <Height>0.15631in</Height>
         <Width>0.68403in</Width>
         <ZIndex>43</ZIndex>
         <Style>
@@ -1395,7 +1390,7 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>3.28153in</Top>
+        <Top>3.29195in</Top>
         <Left>3.50527in</Left>
         <Height>0.16319in</Height>
         <Width>0.78472in</Width>
@@ -1875,7 +1870,7 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Interim billing for services from _______________    to   _______________</Value>
+                <Value>Interim billing for services from</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -1888,7 +1883,7 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
         <Top>5.43086in</Top>
         <Left>0.79875in</Left>
         <Height>0.17in</Height>
-        <Width>4.3298in</Width>
+        <Width>1.77083in</Width>
         <ZIndex>63</ZIndex>
         <Style>
           <Border>
@@ -3260,7 +3255,7 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>per mile</Value>
+                <Value>per hour</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                 </Style>
@@ -3298,8 +3293,8 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>3.10437in</Top>
-        <Left>4.22583in</Left>
+        <Top>3.11591in</Top>
+        <Left>4.23097in</Left>
         <Height>0.15285in</Height>
         <Width>0.08681in</Width>
         <ZIndex>122</ZIndex>
@@ -3326,9 +3321,9 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>3.10445in</Top>
+        <Top>3.12175in</Top>
         <Left>4.77611in</Left>
-        <Height>0.16431in</Height>
+        <Height>0.15631in</Height>
         <Width>0.61459in</Width>
         <ZIndex>123</ZIndex>
         <Style>
@@ -3354,9 +3349,9 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>3.10437in</Top>
+        <Top>3.12175in</Top>
         <Left>5.67541in</Left>
-        <Height>0.16319in</Height>
+        <Height>0.15631in</Height>
         <Width>0.632in</Width>
         <ZIndex>124</ZIndex>
         <Style>
@@ -3579,10 +3574,205 @@ WHERE        (case_ID = @CASE_ID) AND (Date BETWEEN @START_TIME AND @END_TIME)</
           <Border>
             <Style>None</Style>
           </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="START_TIME">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=CDate(Parameters!START_TIME.Value)</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>M/d/yyyy</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>START_TIME</rd:DefaultName>
+        <Top>5.44475in</Top>
+        <Left>2.63902in</Left>
+        <Height>0.13195in</Height>
+        <Width>0.75001in</Width>
+        <ZIndex>136</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Line Name="Line25">
+        <Top>5.59729in</Top>
+        <Left>2.62333in</Left>
+        <Height>0in</Height>
+        <Width>1.20667in</Width>
+        <ZIndex>137</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>to</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>5.43086in</Top>
+        <Left>3.96889in</Left>
+        <Height>0.13553in</Height>
+        <Width>0.21541in</Width>
+        <ZIndex>138</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="END_TIME">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=CDate(Parameters!END_TIME.Value)</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>M/d/yyyy</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>END_TIME</rd:DefaultName>
+        <Top>5.43756in</Top>
+        <Left>4.27439in</Left>
+        <Height>0.13195in</Height>
+        <Width>0.78472in</Width>
+        <ZIndex>139</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Line Name="Line26">
+        <Top>5.58688in</Top>
+        <Left>4.27958in</Left>
+        <Height>0in</Height>
+        <Width>1.21362in</Width>
+        <ZIndex>140</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>David R. Mudgridge, Esq.</Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>LAW OFFICES OF DAVID R. MUDGRIDGE</Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>2100 Tulare Street, Suite 505</Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Fresno, California</Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>0.54875in</Top>
+        <Left>0.36125in</Left>
+        <Height>0.48278in</Height>
+        <Width>3.27777in</Width>
+        <ZIndex>141</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>(559) 264-2688</Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>0.35792in</Top>
+        <Left>3.90292in</Left>
+        <Height>0.09375in</Height>
+        <Width>0.8593in</Width>
+        <ZIndex>142</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
         </Style>
       </Textbox>
     </ReportItems>
